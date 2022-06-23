@@ -1,2 +1,4 @@
 import "../css/style.css";
-console.log("hi");
+import AOS from "aos";
+
+AOS.init();

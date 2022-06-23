@@ -9,61 +9,96 @@
       src="https://kit.fontawesome.com/bcd60471af.js"
       crossorigin="anonymous"
     ></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
   </head>
   <body>
-    <!-- .show-box div태그 활용 -->
-    <div class="show-box" id="show-box">
-      <div class="container" id="container">
-        <!-- 개발자 직군, 지역 선택 select-menu -->
-        <div class="select-menu">
-          <div class="select-box">
-            <select id="developer">
-              <option value="" disabled selected>분야</option>
-              <option value="front-end-developer">프론트엔드 개발자</option>
-              <option value="back-end-developer">백엔드 개발자</option>
-            </select>
-            <label for="developer">
-              <i class="fa fa-chevron-down"></i>
-            </label>
-          </div>
-          <div class="select-box">
-            <select id="nation">
-              <option value="" disabled selected>국가 선택</option>
-              <option value="kor">한국</option>
-              <option value="usa">미국</option>
-            </select>
-            <label for="nation">
-              <i class="fa fa-chevron-down"></i>
-            </label>
+    <main>
+      <section class="page">
+        <div id="page1">
+          <img
+            src="<%= require('./src/img/logo_size.jpg') %>"
+            width="300"
+            height="300"
+          /><br />
+          <a id="scroll2page2" href="#page2">아래로 Scroll</a>
+        </div>
+      </section>
+      <section class="page">
+        <div id="page2"></div>
+        <div class="page2">
+          <div
+            data-aos="fade-up"
+            data-aos-duration="1000"
+            data-aos-delay="300"
+            id="p2"
+          >
+            <p id="font1">&nbsp;&nbsp;끊임없이 변하는 트렌드,</p>
+            <p id="font2">어떻게 따라가고 계신가요?</p>
+            <img
+              src="<%= require('./src/img/Group 2.png') %>"
+              width="100%"
+              id="img"
+            />
           </div>
         </div>
-        <!-- 해당 옵션의 tech 보여주는 부분 -->
-        <div class="developer-framework">
-          <div class="description">
-            TOP 5 BEST<br />WEB DEVELOPMENT<br />STACK
-          </div>
-          <div class="list-wrap" id="list-wrap">
-            <!-- 각 li태그 img는 nth-child로 접근 예정 -->
-            <ul class="tech-list" id="list">
-              <li>
-                <img src="" />
-              </li>
-              <li>
-                <img src="" />
-              </li>
-              <li>
-                <img src="" />
-              </li>
-              <li>
-                <img src="" />
-              </li>
-              <li>
-                <img src="" />
-              </li>
-            </ul>
+      </section>
+      <section class="page">
+        <!-- .show-box div태그 활용 -->
+        <div class="show-box" id="show-box">
+          <div class="container" id="container">
+            <!-- 개발자 직군, 지역 선택 select-menu -->
+            <div class="select-menu">
+              <div class="select-box">
+                <select id="developer">
+                  <option value="" disabled selected>분야</option>
+                  <option value="front-end-developer">프론트엔드 개발자</option>
+                  <option value="back-end-developer">백엔드 개발자</option>
+                </select>
+                <label for="developer">
+                  <i class="fa fa-chevron-down"></i>
+                </label>
+              </div>
+              <div class="select-box">
+                <select id="nation">
+                  <option value="" disabled selected>국가 선택</option>
+                  <option value="kor">한국</option>
+                  <option value="usa">미국</option>
+                </select>
+                <label for="nation">
+                  <i class="fa fa-chevron-down"></i>
+                </label>
+              </div>
+            </div>
+            <!-- 해당 옵션의 tech 보여주는 부분 -->
+            <div class="developer-framework">
+              <div class="description">
+                TOP 5 BEST<br />WEB DEVELOPMENT<br />STACK
+              </div>
+              <div class="list-wrap" id="list-wrap">
+                <!-- 각 li태그 img는 nth-child로 접근 예정 -->
+                <ul class="tech-list" id="list">
+                  <li>
+                    <img src="" />
+                  </li>
+                  <li>
+                    <img src="" />
+                  </li>
+                  <li>
+                    <img src="" />
+                  </li>
+                  <li>
+                    <img src="" />
+                  </li>
+                  <li>
+                    <img src="" />
+                  </li>
+                </ul>
+              </div>
+            </div>
           </div>
         </div>
-      </div>
-    </div>
+      </section>
+    </main>
   </body>
 </html>
