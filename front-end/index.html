@@ -5,10 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title><%= htmlWebpackPlugin.options.title %></title>
-    <script
-      src="https://kit.fontawesome.com/bcd60471af.js"
-      crossorigin="anonymous"
-    ></script>
+    <script src="https://code.jquery.com/jquery-3.5.0.js"></script>
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
   </head>
@@ -21,19 +18,28 @@
             width="300"
             height="300"
           /><br />
-          <a id="scroll2page2" href="#page2">아래로 Scroll</a>
+          <a id="scroll2page2" href="#page2"
+            ><svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="48"
+              height="48"
+              fill="gray"
+              class="bi bi-chevron-compact-down"
+              viewBox="0 0 16 16"
+            >
+              <path
+                fill-rule="evenodd"
+                d="M1.553 6.776a.5.5 0 0 1 .67-.223L8 9.44l5.776-2.888a.5.5 0 1 1 .448.894l-6 3a.5.5 0 0 1-.448 0l-6-3a.5.5 0 0 1-.223-.67z"
+              />
+            </svg>
+          </a>
         </div>
       </section>
       <section class="page">
         <div id="page2"></div>
         <div class="page2">
-          <div
-            data-aos="fade-up"
-            data-aos-duration="1000"
-            data-aos-delay="300"
-            id="p2"
-          >
-            <p id="font1">&nbsp;&nbsp;끊임없이 변하는 트렌드,</p>
+          <div id="p2">
+            <p id="font1">&nbsp;끊임없이 변하는 트렌드,</p>
             <p id="font2">어떻게 따라가고 계신가요?</p>
             <img
               src="<%= require('./src/img/Group 2.png') %>"
@@ -100,5 +106,19 @@
         </div>
       </section>
     </main>
+    <script>
+      $(function () {
+        $(window).scroll(function () {
+          $("#p2").each(function (i) {
+            var bottom_of_object = $(this).offset().top + $(this).outerHeight();
+            var bottom_of_window = $(window).scrollTop() + $(window).height();
+            console.log(bottom_of_window, bottom_of_object / 1.1)
+            if (bottom_of_window > bottom_of_object / 1.1) {
+              $(this).animate({ opacity: "1" }, 1000);
+            }
+          });
+        });
+      });
+    </script>
   </body>
 </html>

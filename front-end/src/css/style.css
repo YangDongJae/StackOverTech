@@ -39,7 +39,7 @@ body {
 
 section {
   width: 100%;
-  height: 2000px;
+  height: 1080px;
 }
 
 main {
@@ -56,30 +56,41 @@ main {
   top: 10%;
 }
 
+#p2 {
+  opacity: 0;
+}
+
 #page2 {
   position: absolute;
-  top: 30%;
+  top: 10%;
   display: flex;
+}
+
+.page2 {
+  display: flex;
+  position: absolute;
 }
 
 #font1 {
   font-family: "S-CoreDream-6Bold";
   font-size: 2vw;
-  width: 100%;
+  width: 90%;
   display: flex;
   position: absolute;
   justify-content: center;
-  bottom: 70%;
+  bottom: 80%;
+  left: 10%;
 }
 
 #font2 {
   font-family: "S-CoreDream-6Bold";
   font-size: 2vw;
-  width: 100%;
+  width: 90%;
   display: flex;
   position: absolute;
   justify-content: center;
-  bottom: 60%;
+  bottom: 70%;
+  left: 10%;
 }
 
 .text {

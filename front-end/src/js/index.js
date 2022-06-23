@@ -1,4 +1,4 @@
 import "../css/style.css";
-import AOS from "aos";
+import "../js/animation.js";
 
-AOS.init();
+$.init();
