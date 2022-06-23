@@ -1,3 +1,4 @@
+/* 초기 설정 */
 @import url("https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@500&display=swap");
 
 @font-face {
@@ -29,6 +30,7 @@ body {
   height: 100%;
 }
 
+/* 틀 설정 */
 .page {
   display: flex;
   position: relative;
@@ -46,6 +48,7 @@ main {
   display: inline;
 }
 
+/* Page1 */
 #scroll2page2 {
   display: flex;
   justify-content: center;
@@ -56,16 +59,19 @@ main {
   top: 10%;
 }
 
+/* FadeIn */
 #p2 {
   opacity: 0;
 }
 
+/* 자동 스크롤 위치 지정 */
 #page2 {
   position: absolute;
   top: 10%;
   display: flex;
 }
 
+/* Page2 */
 .page2 {
   display: flex;
   position: absolute;
@@ -93,17 +99,12 @@ main {
   left: 10%;
 }
 
-.text {
-  position: absolute;
-  top: 30px;
-  left: 40vh;
-}
-
+/* 링크 밑줄 제거 */
 a {
   position: relative;
   text-decoration: none;
 }
-
+ /* ----------------------- */
 .container {
   position: absolute;
   top: 50%;
