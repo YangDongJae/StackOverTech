@@ -39,7 +39,7 @@ body {
 
 section {
   width: 100%;
-  height: 1080px;
+  height: 2000px;
 }
 
 main {
@@ -53,12 +53,12 @@ main {
 
 #page1 {
   position: absolute;
-  top: 30%;
+  top: 10%;
 }
 
 #page2 {
   position: absolute;
-  top: 0;
+  top: 30%;
   display: flex;
 }
 
