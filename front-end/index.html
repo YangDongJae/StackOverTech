@@ -1,9 +1,69 @@
 <!DOCTYPE html>
-<html>
+<html lang="ko">
   <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title><%= htmlWebpackPlugin.options.title %></title>
+    <script
+      src="https://kit.fontawesome.com/bcd60471af.js"
+      crossorigin="anonymous"
+    ></script>
   </head>
   <body>
-    <div></div>
+    <!-- .show-box div태그 활용 -->
+    <div class="show-box" id="show-box">
+      <div class="container" id="container">
+        <!-- 개발자 직군, 지역 선택 select-menu -->
+        <div class="select-menu">
+          <div class="select-box">
+            <select id="developer">
+              <option value="" disabled selected>분야</option>
+              <option value="front-end-developer">프론트엔드 개발자</option>
+              <option value="back-end-developer">백엔드 개발자</option>
+            </select>
+            <label for="developer">
+              <i class="fa fa-chevron-down"></i>
+            </label>
+          </div>
+          <div class="select-box">
+            <select id="nation">
+              <option value="" disabled selected>국가 선택</option>
+              <option value="kor">한국</option>
+              <option value="usa">미국</option>
+            </select>
+            <label for="nation">
+              <i class="fa fa-chevron-down"></i>
+            </label>
+          </div>
+        </div>
+        <!-- 해당 옵션의 tech 보여주는 부분 -->
+        <div class="developer-framework">
+          <div class="description">
+            TOP 5 BEST<br />WEB DEVELOPMENT<br />STACK
+          </div>
+          <div class="list-wrap" id="list-wrap">
+            <!-- 각 li태그 img는 nth-child로 접근 예정 -->
+            <ul class="tech-list" id="list">
+              <li>
+                <img src="" />
+              </li>
+              <li>
+                <img src="" />
+              </li>
+              <li>
+                <img src="" />
+              </li>
+              <li>
+                <img src="" />
+              </li>
+              <li>
+                <img src="" />
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
   </body>
 </html>

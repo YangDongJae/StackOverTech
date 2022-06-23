@@ -24,6 +24,7 @@ module.exports = {
       template: "./index.html",
       inject: "body",
       favicon: "./favicon.ico",
+      chuncks: ["index"],
     }),
     new MiniCssExtractPlugin({ filename: "style.css" }),
   ],
@@ -32,6 +33,10 @@ module.exports = {
       {
         test: /\.css$/,
         use: [MiniCssExtractPlugin.loader, "css-loader"],
+      },
+      {
+        test: [/\.png$/, /\.jpg$/],
+        type: "asset/inline",
       },
     ],
   },
