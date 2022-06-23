@@ -107,12 +107,14 @@
     <script>
       $(function () {
         $(window).scroll(function () {
+          // 스크롤 감지하면
           $("#p2").each(function (i) {
-            var bottom_of_object = $(this).offset().top + $(this).outerHeight();
-            var bottom_of_window = $(window).scrollTop() + $(window).height();
-            console.log(bottom_of_window, bottom_of_object / 1.1)
+            //id: p2 태그 중
+            var bottom_of_object = $(this).offset().top + $(this).outerHeight(); // 보이는 오브젝트의 높이를 측정하고
+            var bottom_of_window = $(window).scrollTop() + $(window).height(); // 전체 창의 높이를 측정한 뒤
             if (bottom_of_window > bottom_of_object / 1.1) {
-              $(this).animate({ opacity: "1" }, 1000);
+              // 만약 내가 원하는 부분까지 보인다면
+              $(this).animate({ opacity: "1" }, 1000); // 불투명값을 0에서 1로 1초동안 바꿔주세요
             }
           });
         });
