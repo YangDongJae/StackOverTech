@@ -1,5 +1,117 @@
-div {
-  width: 100px;
-  height: 100px;
-  background-color: red;
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@500&display=swap");
+
+* {
+  user-select: none;
+  outline: none;
+  list-style: none;
+}
+
+img {
+  width: 180px;
+  height: 60px;
+}
+
+body {
+  background-color: white;
+}
+
+/* 이 부분 수정해서 전체 창에 끼워넣기 */
+.show-box {
+  width: 100%;
+  height: 100%;
+}
+
+.container {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 1080px;
+  margin: auto;
+  background-color: #f3f3f3;
+  border-radius: 8px;
+  padding: 32px;
+}
+
+.select-menu {
+  display: flex;
+  gap: 60px;
+  justify-content: center;
+  align-items: center;
+}
+
+.select-box {
+  display: flex;
+  justify-content: center;
+  width: 260px;
+}
+
+select {
+  -webkit-appearance: none; /* 화살표 없애기 for chrome*/
+  -moz-appearance: none; /* 화살표 없애기 for firefox*/
+  appearance: none; /* 화살표 없애기 공통*/
+  width: 210px;
+  font-size: 20px;
+  text-align: center;
+  font-weight: 500;
+  font-family: "Noto Sans KR", sans-serif;
+  border: none;
+  background-color: transparent;
+}
+
+select:hover {
+  background-color: #f3f3f3;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+label {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 36px;
+  height: 36px;
+  background-color: white;
+  border-radius: 50%;
+  border: solid 1px lightgray;
+  transition: 0.3s;
+}
+
+label:hover {
+  cursor: pointer;
+  background-color: lightgray;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+
+.developer-framework {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  padding: 16px;
+}
+
+.description {
+  font-size: 42px;
+  font-weight: 900;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+}
+
+.list-wrap {
+  background-color: white;
+  border-radius: 8px;
+  padding: 8px 0px;
+  border: solid 1px lightgray;
+}
+
+.tech-list {
+  padding: 0px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 24px;
 }
